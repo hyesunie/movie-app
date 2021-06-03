@@ -1,10 +1,15 @@
-import Potato from "./Potato";
+function Food({ fav }) {
+  return <h1>I like {fav}</h1>;
+}
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1> Hello!!!</h1>
-      <Potato />
+      <Food fav="Kimchi" />
+      <Food fav="ramen" />
+      <Food fav="pizza" />
+      <Food fav="bulgogi" />
     </div>
   );
 }
