@@ -6,10 +6,10 @@ class App extends React.Component {
     count: 0,
   };
   plus = () => {
-    console.log("Plus");
+    this.setState((current) => ({ count: current.count + 1 }));
   };
   minus = () => {
-    console.log("Minus");
+    this.setState((current) => ({ count: current.count - 1 }));
   };
   render() {
     return (
@@ -21,21 +21,5 @@ class App extends React.Component {
     );
   }
 }
-
-// function App() {
-//   return (
-//     <div>
-//       <h1> Hello!!!</h1>
-//       {foodILike.map((dish) => (
-//         <Food
-//           key={dish.id}
-//           name={dish.name}
-//           picture={dish.image}
-//           rating={dish.rating}
-//         ></Food>
-//       ))}
-//     </div>
-//   );
-// }
 
 export default App;
